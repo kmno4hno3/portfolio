@@ -11,12 +11,8 @@
 <body>
   <!-- header -->
   <header class="header">
-
     <div class="header-inner">
-      <!-- <div class="header-logo"><a href="#"><h1>Tatsuo Web Design</h1></a></div> -->
-      <h1>Tatsuo Web Design</h1>
-
-
+      <div class="header-logo"><a href="#"><h1>Tatsuo Web Design</h1></a></div>
       <div class="header-nav">
         <nav class="nav">
           <?php
