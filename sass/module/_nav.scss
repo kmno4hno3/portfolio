@@ -1,0 +1,14 @@
+.nav {
+  // あとで消す
+  background-color: lightcoral;
+  
+
+  &__list {
+    display:flex;
+    & a {
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 0 0 30px;
+    }
+  }
+}

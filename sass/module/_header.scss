@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: lightblue; // あとで消す
+  position: fixed;
+  top: 0px;
+  padding: 30px 4% 10px;
+  box-sizing: border-box;
+
+  &-inner {
+    display: flex;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      background-color:red; // あとで消す
+    }
+  }
+
+  &-nav {
+    margin: 0 0 0 auto;
+  }
+}
