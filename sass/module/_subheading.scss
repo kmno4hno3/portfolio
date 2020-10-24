@@ -1,13 +1,13 @@
 .subheading {
     width: 100%;
     height: 150px;
-    background-color: rgba(249, 249, 249, 1);
+    background-color:$color-gray;
     text-align: center;
     padding: 30px;
 
     &__title {
       font-size: 48px;
-      color:black;
+      color:$color-black;
     }
 
     &__bar {

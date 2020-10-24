@@ -1,13 +1,12 @@
 .nav {
-
   &__list {
-    display:flex;
+    display: flex;
     line-height: 80px;
     & a {
       text-decoration: none;
       font-size: 14px;
       margin: 0 0 0 30px;
-      color:black;
+      color: $color-black;
     }
   }
 }

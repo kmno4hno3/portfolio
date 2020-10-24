@@ -1,23 +1,25 @@
 /*-------------------------
 	@media
- -------------------------*/ 
+ -------------------------*/
 
- $breakpoint-down : (
-  'sm': "screen and (max-width: 479px)",
-  'md': "screen and (max-width: 599px)",
-  'lg': "screen and (max-width: 959px)",
-  'xl': "screen and (max-width: 1279px)"
- );
+$breakpoint-down: (
+  "sm": "screen and (max-width: 479px)",
+  "md": "screen and (max-width: 599px)",
+  "lg": "screen and (max-width: 959px)",
+  "xl": "screen and (max-width: 1279px)",
+);
 
- $breakpoint-up : (
-  'sm': "screen and (min-width: 480px)",
-  'md': "screen and (min-width: 600px)",
-  'lg': "screen and (min-width: 960px)",
-  'xl': "screen and (min-width: 1280px)"
- );
+$breakpoint-up: (
+  "sm": "screen and (min-width: 480px)",
+  "md": "screen and (min-width: 600px)",
+  "lg": "screen and (min-width: 960px)",
+  "xl": "screen and (min-width: 1280px)",
+);
 
-
- /*-------------------------
+/*-------------------------
 	@color
- -------------------------*/ 
- $color-white : white;
+ -------------------------*/
+$color-white: white;
+$color-blue: rgba(0, 72, 255, 1);
+$color-black: black;
+$color-gray: rgba(249, 249, 249, 1);
