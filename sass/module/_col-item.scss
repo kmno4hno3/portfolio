@@ -1,7 +1,14 @@
 .col-item {
+  text-align: center;
+  margin: 0 48px;
+
   img {
     background-size: cover;
     width: 100px;
-    margin: 0 auto;
+  }
+
+  &__text {
+    text-align:left;
+    width: 280px;
   }
 }
