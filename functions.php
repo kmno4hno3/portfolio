@@ -56,7 +56,7 @@ function create_post_type()
       ),
       'public' => true, 			//ユーザーが内容を投稿する場合true(通常はtrue)
         'menu_position' => 5,		//管理画面左側の表示位置(5:投稿, 10:メディア, 15:リンク, 20:固定ページ)
-        'supports' => array('title', 'editor', 'thumbnail'),
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
         'show_in_rest'  => true,  // 5系から出てきた新エディタ「Gutenberg」を有効にする
     )
   );

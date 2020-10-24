@@ -90,7 +90,7 @@
               }
               ?>
               <p><?php echo get_the_title($post->ID); ?></p>
-              <p></p>
+              <p><?php echo get_the_excerpt($post->ID); ?></p>
             </a>
           <?php endforeach; ?>
           <?php wp_reset_postdata(); ?>
