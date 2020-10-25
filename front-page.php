@@ -39,20 +39,20 @@
         </div>
         <div class="container">
           <div class="col3">
-            <div class="col-item">
+            <div class="colItem">
               <img src="<?php echo get_template_directory_uri(); ?>/img/icon-pen.png" alt="">
-              <p class="col-item__tit">企画</p>
-              <p class="col-item__text">ご要望を丁寧にヒアリングします。求めるものをしっかり聞き取り、お客様のご要望や目的に合わせて最もベストなプランを企画します。必ず気に入って下さるように入念に準備をしてwebサイトやバナー制作がより良いものになるように致します。</p>
+              <p class="colItem__tit">企画</p>
+              <p class="colItem__text">ご要望を丁寧にヒアリングします。求めるものをしっかり聞き取り、お客様のご要望や目的に合わせて最もベストなプランを企画します。必ず気に入って下さるように入念に準備をしてwebサイトやバナー制作がより良いものになるように致します。</p>
             </div>
-            <div class="col-item">
+            <div class="colItem">
               <img src="<?php echo get_template_directory_uri(); ?>/img/icon-palette.png" alt="">
-              <p class="col-item__tit">デザイン</p>
-              <p class="col-item__text">お客様からヒアリングして練ったプランを基にデザインして行きます。目的に合わせて見た目と機能性が両立するデザインを心掛け、世界で一つだけのオリジナリティあるwebサイトを作成します。</p>
+              <p class="colItem__tit">デザイン</p>
+              <p class="colItem__text">お客様からヒアリングして練ったプランを基にデザインして行きます。目的に合わせて見た目と機能性が両立するデザインを心掛け、世界で一つだけのオリジナリティあるwebサイトを作成します。</p>
             </div>
-            <div class="col-item">
+            <div class="colItem">
               <img src="<?php echo get_template_directory_uri(); ?>/img/icon-code.png" alt="">
-              <p class="col-item__tit">コーディング</p>
-              <p class="col-item__text">デザインを基にアニメーションや使いやすさを追求し、これらをコーディングにより実現します。見た目だけでなくサイトを訪れた人が利用しやすいよう作り込み、集客効果を高めます。</p>
+              <p class="colItem__tit">コーディング</p>
+              <p class="colItem__text">デザインを基にアニメーションや使いやすさを追求し、これらをコーディングにより実現します。見た目だけでなくサイトを訪れた人が利用しやすいよう作り込み、集客効果を高めます。</p>
             </div>
           </div>
         </div>
@@ -79,18 +79,18 @@
           $my_posts = get_posts($args);
           ?>
           <?php foreach ($my_posts as $post) : setup_postdata($post); ?>
-            <a class="card-item" href="<?php echo get_permalink($post->ID); ?>">
+            <a class="cardItem" href="<?php echo get_permalink($post->ID); ?>">
               <?php
               $thumbnail_id = get_post_thumbnail_id($post->ID);
               $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
               if (get_post_thumbnail_id($post->ID)) {
-                echo '<figure class="card-item__fig"><img src="' . $thumb_url[0] . '" alt=""></figure>';
+                echo '<figure class="cardItem__fig"><img src="' . $thumb_url[0] . '" alt=""></figure>';
               } else {
-                echo '<figure class="card-item__fig"><img src="' . get_template_directory_uri() . '/img/no-img.png" alt=""></figure>';
+                echo '<figure class="cardItem__fig"><img src="' . get_template_directory_uri() . '/img/no-img.png" alt=""></figure>';
               }
               ?>
-              <p><?php echo get_the_title($post->ID); ?></p>
-              <p><?php echo get_the_excerpt($post->ID); ?></p>
+              <p class="cardItem__tit"><?php echo get_the_title($post->ID); ?></p>
+              <p class="cardItem__excerpt"><?php echo get_the_excerpt($post->ID); ?></p>
             </a>
           <?php endforeach; ?>
           <?php wp_reset_postdata(); ?>
@@ -143,7 +143,7 @@
   </section><!-- /sec -->
 
   <!-- sec -->
-  <section class="sec section-8">
+  <section class="sec">
 
   </section><!-- /sec -->
 

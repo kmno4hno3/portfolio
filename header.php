@@ -5,17 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tatsuo Web Design</title>
-  
+
 
 
   <?php wp_head(); ?>
 </head>
 
-<body class="drawer drawer--top">
+<body class="drawer--top drawer">
   <!-- header -->
   <header class="header">
 
-    <div class="header-drawer _pcNone">
+    <div class="_pcNone">
       <button type="button" class="drawer-toggle drawer-hamburger">
         <span class="sr-only">toggle navigation</span>
         <span class="drawer-hamburger-icon"></span>
@@ -35,11 +35,11 @@
       </nav>
     </div>
 
-    <div class="header-inner">
-      <div class="header-logo"><a href="#">
+    <div class="inner--header">
+      <div class="logo"><a href="#">
           <h1>Tatsuo Web Design</h1>
         </a></div>
-      <div class="header-nav _pcOnly">
+      <div class="nav--header _pcOnly">
         <nav class="nav">
           <?php
           wp_nav_menu(array(

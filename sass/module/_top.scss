@@ -10,12 +10,11 @@
   &__inner {
     width:80%;
     height:300px;
-    margin-top: 200px;
   }
 
   &__title {
     color:$color-white;
-    font-size: 84px;
+    font-size: $titleFontSize-big;
   }
 
   &__text {
