@@ -90,8 +90,8 @@
                   echo '<figure class="cardItem__fig"><img src="' . get_template_directory_uri() . '/img/no-img.png" alt=""></figure>';
                 }
                 ?>
-                <p class="cardItem__tit"><?php echo get_the_title($post->ID); ?></p>
-                <p class="cardItem__excerpt"><?php echo get_the_excerpt($post->ID); ?></p>
+                <p class="cardItem__tit"><?php echo my_the_title(get_the_title($post->ID)); ?></p>
+                <p class="cardItem__excerpt"><?php echo my_the_excerpt(get_the_excerpt($post->ID)); ?></p>
               </a>
             <?php endforeach; ?>
             <?php wp_reset_postdata(); ?>

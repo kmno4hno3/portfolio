@@ -69,11 +69,16 @@ add_action('init', 'create_post_type');
 add_theme_support( 'post-thumbnails' );
 
 
-// add_filter( 'wp_insert_post_data', function ( $data ) {
-// 	if ( isset( $_GET['meta-box-loader'] ) ) {
-// 		unset( $data["post_modified"] );
-// 		unset( $data["post_modified_gmt"] );
-// 	}
+// 抜粋文字数制限
+function my_the_excerpt($postContent){
+  $postContent = mb_strimwidth($postContent, 0, 100, "...", "UTF-8");
+  return $postContent;
+}
+add_filter('the_excerpt', 'my_the_excerpt');
 
-// 	return $data;
-// } );
+// タイトル文字数制限
+function my_the_title($postContent){
+  $postContent = mb_strimwidth($postContent, 0, 20, "...", "UTF-8");
+  return $postContent;
+}
+add_filter('the_title', 'my_the_title');
