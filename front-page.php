@@ -68,32 +68,34 @@
           <h2 class="subheading__title">WORKS</h2>
           <p class="subheading__bar"></p>
         </div>
-        <div class="cards">
-          <?php
-          $args = array(
-            'post_per_page' => 5,
-            'post_type' => array('work'),
-            'orderby' => 'date',
-            'order' => 'DESC'
-          );
-          $my_posts = get_posts($args);
-          ?>
-          <?php foreach ($my_posts as $post) : setup_postdata($post); ?>
-            <a class="cardItem" href="<?php echo get_permalink($post->ID); ?>">
-              <?php
-              $thumbnail_id = get_post_thumbnail_id($post->ID);
-              $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
-              if (get_post_thumbnail_id($post->ID)) {
-                echo '<figure class="cardItem__fig"><img src="' . $thumb_url[0] . '" alt=""></figure>';
-              } else {
-                echo '<figure class="cardItem__fig"><img src="' . get_template_directory_uri() . '/img/no-img.png" alt=""></figure>';
-              }
-              ?>
-              <p class="cardItem__tit"><?php echo get_the_title($post->ID); ?></p>
-              <p class="cardItem__excerpt"><?php echo get_the_excerpt($post->ID); ?></p>
-            </a>
-          <?php endforeach; ?>
-          <?php wp_reset_postdata(); ?>
+        <div class="container--cards">
+          <div class="cards">
+            <?php
+            $args = array(
+              'post_per_page' => 5,
+              'post_type' => array('work'),
+              'orderby' => 'date',
+              'order' => 'DESC'
+            );
+            $my_posts = get_posts($args);
+            ?>
+            <?php foreach ($my_posts as $post) : setup_postdata($post); ?>
+              <a class="cardItem" href="<?php echo get_permalink($post->ID); ?>">
+                <?php
+                $thumbnail_id = get_post_thumbnail_id($post->ID);
+                $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
+                if (get_post_thumbnail_id($post->ID)) {
+                  echo '<figure class="cardItem__fig"><img src="' . $thumb_url[0] . '" alt=""></figure>';
+                } else {
+                  echo '<figure class="cardItem__fig"><img src="' . get_template_directory_uri() . '/img/no-img.png" alt=""></figure>';
+                }
+                ?>
+                <p class="cardItem__tit"><?php echo get_the_title($post->ID); ?></p>
+                <p class="cardItem__excerpt"><?php echo get_the_excerpt($post->ID); ?></p>
+              </a>
+            <?php endforeach; ?>
+            <?php wp_reset_postdata(); ?>
+          </div>
         </div>
       </div>
     </div>
@@ -107,7 +109,7 @@
           <p class="subheading__bar"></p>
         </div>
         <div class="container">
-          
+
         </div>
       </div>
     </div>
@@ -121,7 +123,7 @@
           <p class="subheading__bar"></p>
         </div>
         <div class="container">
-          
+
         </div>
       </div>
     </div>
@@ -136,7 +138,7 @@
           <p class="subheading__bar"></p>
         </div>
         <div class="container">
-          
+
         </div>
       </div>
     </div>

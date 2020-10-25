@@ -1,4 +1,15 @@
 .cardItem {
   width: 400px;
   margin: 0 auto;
+  text-decoration: none;
+  color: $color-black;
+
+  &__fig {
+    margin-bottom: 20px;
+  }
+
+  &__tit {
+    font-size: $textFontSize-big;
+    margin-bottom: 10px;
+  }
 }

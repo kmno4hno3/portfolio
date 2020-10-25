@@ -7,6 +7,11 @@
     width: 100px;
   }
 
+  &__tit {
+    font-size: $textFontSize-big;
+    margin: 30px 0;
+  }
+
   &__text {
     text-align:left;
     width: 280px;
