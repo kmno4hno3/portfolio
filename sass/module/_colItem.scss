@@ -2,6 +2,11 @@
   text-align: center;
   margin: 0 48px;
 
+  &--blog {
+    text-decoration: none;
+    color: $color-black;
+  }
+
   img {
     background-size: cover;
     width: 100px;
@@ -13,7 +18,12 @@
   }
 
   &__text {
-    text-align:left;
+    text-align: left;
     width: 280px;
+  }
+
+  &__fig {
+    background-size: cover;
+    width: 350px;
   }
 }

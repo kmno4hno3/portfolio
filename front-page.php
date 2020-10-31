@@ -62,17 +62,17 @@
 
   <!-- sec -->
   <section class="sec">
-    <div class="service">
-      <div class="service__inner">
+    <div class="works">
+      <div class="works__inner">
         <div class="subheading">
           <h2 class="subheading__title">WORKS</h2>
           <p class="subheading__bar"></p>
         </div>
-        <div class="container--cards">
+        <div class="container">
           <div class="cards">
             <?php
             $args = array(
-              'post_per_page' => 5,
+              'posts_per_page' => 3,
               'post_type' => array('work'),
               'orderby' => 'date',
               'order' => 'DESC'
@@ -109,7 +109,37 @@
           <p class="subheading__bar"></p>
         </div>
         <div class="container">
-
+          <div class="cards">
+            <?php
+            $args = array(
+              'posts_per_page' => 3,
+              'post_type' => array('post'),
+              'orderby' => 'date',
+              'order' => 'DESC'
+            );
+            $my_posts = get_posts($args);
+            ?>
+            <?php foreach ($my_posts as $post) : setup_postdata($post); ?>
+              <a class="cardItem" href="<?php echo get_permalink($post->ID); ?>">
+                <?php
+                $thumbnail_id = get_post_thumbnail_id($post->ID);
+                $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
+                if (get_post_thumbnail_id($post->ID)) {
+                  echo '<figure class="cardItem__fig"><img src="' . $thumb_url[0] . '" alt=""></figure>';
+                } else {
+                  echo '<figure class="cardItem__fig"><img src="' . get_template_directory_uri() . '/img/no-img.png" alt=""></figure>';
+                }
+                ?>
+                <p class="cardItem__tit"><?php echo my_the_title(get_the_title($post->ID)); ?></p>
+                <div class="time">
+                  <p class="time__item"><i class="time__icon fa fa-sync-alt"></i><?php echo get_the_time('Y-m-d');?></p>
+                  <p class="time__item"><i class="time__icon fas fa-calendar-alt"></i><?php echo get_the_modified_time('Y-m-d');?></p>
+                </div>
+                <p class="cardItem__text"><?php echo my_the_text(get_the_excerpt($post->ID)); ?></p>
+              </a>
+            <?php endforeach; ?>
+            <?php wp_reset_postdata(); ?>
+          </div>
         </div>
       </div>
     </div>

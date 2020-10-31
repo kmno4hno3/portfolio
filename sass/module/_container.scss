@@ -1,16 +1,12 @@
 .container {
   width: 1200px;
   margin: auto;
-  padding: 60px;
+  padding: 60px 0;
 
   &__text {
     font-size: $textFontSize-medium;
     width: 790px;
     margin: 0 auto;
     line-height:2.5rem;
-  }
-
-  &--cards {
-    padding: 60px 0;
   }
 }

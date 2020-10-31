@@ -76,9 +76,16 @@ function my_the_excerpt($postContent){
 }
 add_filter('the_excerpt', 'my_the_excerpt');
 
+//  本文テキスト文字数制限
+function my_the_text($postContent){
+  $postContent = mb_strimwidth($postContent, 0, 200, "...", "UTF-8");
+  return $postContent;
+}
+add_filter('the_excerpt', 'my_the_excerpt');
+
 // タイトル文字数制限
 function my_the_title($postContent){
-  $postContent = mb_strimwidth($postContent, 0, 20, "...", "UTF-8");
+  $postContent = mb_strimwidth($postContent, 0, 30, "...", "UTF-8");
   return $postContent;
 }
 add_filter('the_title', 'my_the_title');
