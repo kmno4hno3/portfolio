@@ -3,8 +3,12 @@
   margin: auto;
   padding: 60px 0;
 
+  &--contact{
+    text-align: center;
+  }
+
   &__text {
-    font-size: $textFontSize-medium;
+    font-size: $textFontSize-middle;
     width: 790px;
     margin: 0 auto;
     line-height:2.5rem;

@@ -7,9 +7,15 @@
     color: $color-black;
   }
 
-  img {
+  &__img {
     background-size: cover;
     width: 100px;
+  }
+
+  &__img--col2 {
+    width: 400px;
+    margin-left: 200px;
+    border-radius: 5px;
   }
 
   &__tit {
@@ -20,6 +26,15 @@
   &__text {
     text-align: left;
     width: 280px;
+  }
+
+  &__text--info {
+    font-size: $textFontSize-middle;
+    margin-bottom: 5px;
+  }
+
+  &__enhansis {
+    font-weight: bold;
   }
 
   &__fig {
