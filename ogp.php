@@ -44,7 +44,7 @@ echo '
 <meta property="og:image" content="' . $imgurl[2] . '">';
 echo "\n";
 } else { //投稿にサムネイルも画像も無い場合の処理
-$ogp_image = get_template_directory_uri() . '/images/og-image.jpg';
+$ogp_image = get_template_directory_uri() . '/img/img-og.jpg';
 echo '
 <meta property="og:image" content="' . $ogp_image . '">';
 echo "\n";
@@ -54,7 +54,7 @@ if (get_header_image()) { //ヘッダーイメージがある場合は、ヘッ�
 echo '
 <meta property="og:image" content="' . get_header_image() . '">';
 echo "\n";
-} else { //ヘッダーイメージがない場合は、テーマのスクリーンショット
+} else { //ヘッダーイメージがない場合は、テーマのスクリーンショット(TODO:screenshot.png用意)
 echo '
 <meta property="og:image" content="' . get_template_directory_uri() . '/screenshot.png">';
 echo "\n";
@@ -62,12 +62,12 @@ echo "\n";
 }
 ?>
 <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-<meta property="og:locale" content="ja_JP" />
-<meta property="fb:app_id" content="自分のapp_idをいれる">
+<meta property="og:locale" content="TODO:ja_JP" />
+<meta property="fb:app_id" content="TODO:自分のapp_idをいれる">
 <!-- /OGP -->
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:creator" content="自分のtwitter_idをいれる">
-<meta name="twitter:site" content="自分のtwitter_idをいれる">
+<meta name="twitter:creator" content="TODO:自分のtwitter_idをいれる">
+<meta name="twitter:site" content="TODO:自分のtwitter_idをいれる">
 <!-- /Twitter Card -->

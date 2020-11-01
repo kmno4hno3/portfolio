@@ -101,3 +101,28 @@ if ( !function_exists( 'is_noindex_page' ) ):
     is_attachment();  //添付ファイルページも含めない
   }
   endif;
+
+
+// <title></title>をページ種類に応じて自動出力 TODO:いずれここを<title>タグを全て置き換える
+// add_theme_support( 'title-tag' );
+
+
+// 抜粋を表示する
+function original_description() {
+  if(get_the_excerpt()) {
+    $description = get_the_excerpt();
+  }
+  return $description;
+}
+
+// 現在のページ送り番号を表示(カテゴリーページを表示する際に必要)
+function show_page_number() {
+  global $wp_query;
+
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $max_page = $wp_query->max_num_pages;
+  echo $paged;  
+}
+
+// wpが自動で出力するcanonicalタグを止める
+remove_action('wp_head', 'rel_canonical');

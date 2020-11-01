@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <script src="https://kit.fontawesome.com/936a0994d9.js" crossorigin="anonymous"></script>
 
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <!-- schema.orgで構造化マークアップ -->
 
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-    <!-- 文字エンコーディング情報を出力 -->
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <!-- 電話番号の自動リンク機能を無効化 -->
-    <meta name="format-detection" content="telephone=no">
-    <!-- レスポンシブ対応 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- IEでも常に標準モードで表示 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- SEOの設定テンプレート -->
-    <?php get_template_part('seo-header'); ?>
-    <!-- OGPの設定テンプレート -->
-    <?php get_template_part('ogp'); ?>
-    <!-- スタイルシートURLを出力 -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-    <!-- wp_headはテーマの</head>タグ直前に必ず挿入します -->
-    <?php wp_head(); ?>
-  </head>
-
-
-
+  <!-- fontawesome有効化 -->
+  <script src="https://kit.fontawesome.com/936a0994d9.js" crossorigin="anonymous"></script>
+  <!-- 文字エンコーディング情報を出力 -->
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <!-- 電話番号の自動リンク機能を無効化 -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- レスポンシブ対応 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- IEでも常に標準モードで表示 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- SEOの設定テンプレート -->
+  <?php get_template_part('seo-header'); ?>
+  <!-- OGPの設定テンプレート -->
+  <?php get_template_part('ogp'); ?>
+  <!-- wp_headはテーマの</head>タグ直前に必ず挿入します -->
   <?php wp_head(); ?>
 </head>
 
