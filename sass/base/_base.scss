@@ -9,3 +9,9 @@
     display:none;
   }
 }
+
+.__spcol {
+  @include mq-down('sm'){
+    display:none;
+  }
+}

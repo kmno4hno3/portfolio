@@ -3,7 +3,7 @@
 <main>
 
   <!-- sec -->
-  <section class="sec--topbg">
+  <section class="sec--topbg ">
     <div class="top">
       <!-- Todo:ここ消す -->
       <div class="top__inner">
@@ -16,7 +16,7 @@
   </section><!-- /sec -->
 
   <!-- sec -->
-  <section class="sec">
+  <section class="sec __spcol">
     <div class="inner">
       <div class="subheading">
         <h2 class="subheading__title">Introduction</h2>
