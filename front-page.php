@@ -23,7 +23,7 @@
         <p class="subheading__bar"></p>
       </div>
       <div class="container">
-        <p class="container__text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+        <p class="container__text">ご訪問頂きありがとうございます。当サイトではお客様からのHP制作依頼を承ります。お客様からのご要望通りにすることはもちろんのこと、より満足頂けるようお客様の意見をくまなく汲みとってサイト設計を行います。また、SEO対策を実施して集客効果を高める対応も致しますので、デザインだけでなく有用性が高いサイトに仕上げます。HPをゼロから作りたい、既存のHPに機能を追加したいなどあらゆるWEB制作のニーズにお応えします。HP制作後もお客様の方で記事を更新したりできるよう、CMSにてHPを構築致します。どのようなご相談でも伺いますので、まずはお気軽にご相談下さい。
         </p>
       </div>
     </div>
@@ -167,15 +167,15 @@
         <p class="subheading__bar"></p>
       </div>
       <div class="container">
-        <div class="col2">
-          <div class="colItem">
-            <p class="colItem__text--info"><span class="colItem__enhansis">名前 : </span>遠藤達也</p>
-            <p class="colItem__text--info"><span class="colItem__enhansis">職業: </span>ITエンジニア</p>
-            <p class="colItem__text--info"><span class="colItem__enhansis">事業内容 : </span>ウェブ制作</p>
-            <p class="colItem__text--info"><span class="colItem__enhansis">住所 : </span>神奈川県川崎市</p>
+        <div class="overlap">
+          <div class="overlap__item">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/img-prof.png" alt="" class="overlap__img overlap__img--col2">
           </div>
-          <div class="colItem">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/img-prof.jpg" alt="" class="colItem__img colItem__img--col2">
+          <div class="overlap__item">
+            <p class="overlap__text"><span class="overlap__enhansis">名前 : </span>遠藤達也</p>
+            <p class="overlap__text"><span class="overlap__enhansis">職業: </span>ITエンジニア</p>
+            <p class="overlap__text"><span class="overlap__enhansis">事業内容 : </span>ウェブ制作</p>
+            <p class="overlap__text"><span class="overlap__enhansis">住所 : </span>神奈川県川崎市</p>
           </div>
         </div>
         <div class="detail">

@@ -1,0 +1,19 @@
+.overlap {
+  text-align: center;
+  margin: 0 48px;
+
+  &__enhansis {
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: $textFontSize-middle;
+    margin-bottom: 5px;
+  }
+
+  &__img {
+    background-size: cover;
+    width: 150px;
+    margin-bottom: 30px;
+  }
+}

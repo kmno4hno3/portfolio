@@ -89,3 +89,15 @@ function my_the_title($postContent){
   return $postContent;
 }
 add_filter('the_title', 'my_the_title');
+
+// noindexをつける
+if ( !function_exists( 'is_noindex_page' ) ):
+  function is_noindex_page(){
+    return ( is_month()) ||  //月のアーカイブページはインデックスに含めない
+    is_date() ||  //日のアーカイブはインデックスに含めない
+    is_tag() ||  //タグページをインデックスしたい場合はこの行を削除
+    is_search() ||  //検索結果ページはインデックスに含めない
+    is_404() ||  //404ページはインデックスに含めない
+    is_attachment();  //添付ファイルページも含めない
+  }
+  endif;
