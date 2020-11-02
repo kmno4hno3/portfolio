@@ -15,5 +15,9 @@
     background-size: cover;
     width: 150px;
     margin-bottom: 30px;
+
+    @include mq-down("sm") {
+      width: 120px;
+    }
   }
 }
