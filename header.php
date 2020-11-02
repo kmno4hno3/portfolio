@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" _spOnly>
 
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
@@ -49,7 +49,7 @@
 
     <div class="inner--header">
       <div class="logo"><a href="#">
-          <h1>Tatsuo Web Design</h1>
+          <h1 class="logo__txt">Tatsuo Web Design</h1>
         </a></div>
       <div class="nav--header _pcOnly">
         <nav class="nav">

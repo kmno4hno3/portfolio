@@ -6,7 +6,6 @@ ol, ul, li, fieldset, form, label, legend, table, caption,
 tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
 figcaption, figure, footer, header, hgroup, menu, nav, section,
 summary, time, mark, audio, video {
-  font-size: 100%;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
@@ -84,22 +83,6 @@ hr {
   padding: 0;
   border: 0;
   border-top: 1px solid #ccc;
-}
-
-/*サイト全体の基準となるCSSを記述*/
-html {
-  font-size: 16px;
-}
-
-body {
-  /*フォントの指定*/
-  font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'Noto Sans Japanese', Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-  /*行間の指定*/
-  line-height: 1.4;
-  margin: 0;
-  padding: 0;
-  /*サイトのデフォルトとなる文字の色を指定*/
-  color: #333;
 }
 
 /*見出しを全て太字で表示 + 文字色を黒に*/

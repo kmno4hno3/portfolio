@@ -1,8 +1,25 @@
 .cardItem {
   width: 400px;
-  margin: 30px;
+  margin: 30px 10px;
   text-decoration: none;
   color: $color-black;
+
+
+  @include mq-down("xl") {
+    width: 280px;
+    margin: 30px 10px;
+  }
+
+  @include mq-down("lg") {
+    width: 450px;
+    margin: 30px 20px;
+  }
+
+  @include mq-down("md") {
+    width: 400px;
+    margin: 30px 10px;
+  }
+
 
   &__fig {
     margin-bottom: 20px;
@@ -11,5 +28,13 @@
   &__tit {
     font-size: $textFontSize-big;
     margin-bottom: 10px;
+  }
+
+  &__excerpt {
+    font-size: $textFontSize-small;
+  }
+
+  &__text {
+    font-size: $textFontSize-small;
   }
 }

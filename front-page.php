@@ -3,7 +3,7 @@
 <main>
 
   <!-- sec -->
-  <section class="sec--topbg ">
+  <section class="sec--topbg">
     <div class="top">
       <!-- Todo:ここ消す -->
       <div class="top__inner">

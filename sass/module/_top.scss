@@ -1,7 +1,6 @@
 .top {
   width: 100%;
   height:100%;
-
   display:flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +8,6 @@
 
   &__inner {
     width:80%;
-    height:300px;
   }
 
   &__title {
@@ -20,5 +18,6 @@
   &__text {
     color: $color-white;
     margin-bottom: 30px;
+    font-size: $textFontSize-small;
   }
 }

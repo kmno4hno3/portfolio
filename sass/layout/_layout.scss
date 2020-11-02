@@ -1,15 +1,42 @@
-header {
+/*サイト全体の基準となるCSSを記述*/
+html {
+  font-size: 62.5%;
 
+  @include mq-down("lg") {
+    font-size: 50%;
+  }
+
+  @include mq-down("md") {
+    font-size: 45%;
+  }
+
+  @include mq-down("sm") {
+    font-size: 35%;
+  }
+}
+
+body {
+  font-size: $textFontSizeForbody-small;
+  /*フォントの指定*/
+  font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro",
+    "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", Osaka, "ＭＳ Ｐゴシック",
+    "MS PGothic", sans-serif;
+  /*行間の指定*/
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  /*サイトのデフォルトとなる文字の色を指定*/
+  color: #333;
+}
+
+header {
 }
 
 section {
-
 }
 
 nav {
-
 }
 
 footer {
-
 }

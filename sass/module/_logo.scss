@@ -3,6 +3,21 @@
   line-height: 80px;
   text-align:center;
   border-right: solid 1px #cfcfcf;
+  margin-left: 0;
+  
+    @include mq-down("lg") {
+      width: 200px;
+      line-height: 60px;
+    }
+
+    @include mq-down("sm") {
+      width: 150px;
+      line-height: 60px;
+    }
+
+  &__txt {
+    font-size: $textFontSize-middle;
+  }
 
   a {
     text-decoration: none;
