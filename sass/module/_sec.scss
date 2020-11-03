@@ -6,15 +6,8 @@
     background-size: cover;
   
     @include mq-down("lg") {
-      height: 700px;
-    }
-  
-    @include mq-down("md") {
-      height: 550px;
-    }
-
-    @include mq-down("sm") {
-      height: 400px;
+      height: 55vh;
+      background-position-x: center;
     }
   }
 }
