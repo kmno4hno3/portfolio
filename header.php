@@ -28,7 +28,7 @@
   <header class="header">
 
     <div class="_pcNone">
-      <button type="button" class="drawer-toggle drawer-hamburger">
+      <button type="button" class="drawer__btn drawer-toggle drawer-hamburger">
         <span class="sr-only">toggle navigation</span>
         <span class="drawer-hamburger-icon"></span>
       </button>
@@ -40,7 +40,7 @@
           'depth' => 1,
           'fallback_cb' => false,
           'menu_class' => 'drawer-menu',
-          'add_li_class' => 'drawer-menu-item'
+          'add_li_class' => 'drawer__item drawer-menu-item'
         );
         wp_nav_menu($args);
         ?>
