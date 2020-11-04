@@ -68,6 +68,6 @@ function phpserver(cb) {
   });
 }
 
-// exports.sass = series(sassToCss);
+exports.sass = series(sassToCss);
 exports.build = series(phpserver, sassToCss);
 exports.default = parallel(series(phpserver, sassToCss), watcher);
