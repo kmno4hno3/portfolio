@@ -1,0 +1,17 @@
+.detail {
+  margin-top: 30px;
+
+  &__link{
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &__txt {
+    text-align: center;
+    font-size: $textFontSize-small;
+  }
+
+  &__icon {
+    margin-left: 20px;
+  }
+}

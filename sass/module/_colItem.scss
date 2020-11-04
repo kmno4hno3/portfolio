@@ -1,19 +1,53 @@
 .colItem {
   text-align: center;
   margin: 0 48px;
+  width: 300px;
 
-  img {
+  @include mq-down("xl") {
+    width: 250px;
+    margin: 0 20px;
+  }
+
+  @include mq-down("lg") {
+    width: 160px;
+    // margin: 0 5px;
+  }
+
+  @include mq-down("md") {
+    width: 300px;
+    margin: 20px 10px;
+  }
+
+  &--blog {
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &__img {
     background-size: cover;
     width: 100px;
+
+    @include mq-down("lg") {
+      width: 80px;
+    }
   }
 
   &__tit {
     font-size: $textFontSize-big;
-    margin: 30px 0;
+    margin: 10px 0;
+
+    @include mq-down("md") {
+      width: 300px;
+      margin: 0px 0px;
+    }
   }
 
   &__text {
-    text-align:left;
-    width: 280px;
+    text-align: left;
+    font-size: $textFontSize-small;
+  }
+
+  &__fig {
+    background-size: cover;
   }
 }

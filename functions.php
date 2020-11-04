@@ -76,9 +76,53 @@ function my_the_excerpt($postContent){
 }
 add_filter('the_excerpt', 'my_the_excerpt');
 
+//  本文テキスト文字数制限
+function my_the_text($postContent){
+  $postContent = mb_strimwidth($postContent, 0, 200, "...", "UTF-8");
+  return $postContent;
+}
+add_filter('the_excerpt', 'my_the_excerpt');
+
 // タイトル文字数制限
 function my_the_title($postContent){
-  $postContent = mb_strimwidth($postContent, 0, 20, "...", "UTF-8");
+  $postContent = mb_strimwidth($postContent, 0, 30, "...", "UTF-8");
   return $postContent;
 }
 add_filter('the_title', 'my_the_title');
+
+// noindexをつける
+if ( !function_exists( 'is_noindex_page' ) ):
+  function is_noindex_page(){
+    return ( is_month()) ||  //月のアーカイブページはインデックスに含めない
+    is_date() ||  //日のアーカイブはインデックスに含めない
+    is_tag() ||  //タグページをインデックスしたい場合はこの行を削除
+    is_search() ||  //検索結果ページはインデックスに含めない
+    is_404() ||  //404ページはインデックスに含めない
+    is_attachment();  //添付ファイルページも含めない
+  }
+  endif;
+
+
+// <title></title>をページ種類に応じて自動出力 TODO:いずれここを<title>タグを全て置き換える
+// add_theme_support( 'title-tag' );
+
+
+// 抜粋を表示する
+function original_description() {
+  if(get_the_excerpt()) {
+    $description = get_the_excerpt();
+  }
+  return $description;
+}
+
+// 現在のページ送り番号を表示(カテゴリーページを表示する際に必要)
+function show_page_number() {
+  global $wp_query;
+
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $max_page = $wp_query->max_num_pages;
+  echo $paged;  
+}
+
+// wpが自動で出力するcanonicalタグを止める
+remove_action('wp_head', 'rel_canonical');

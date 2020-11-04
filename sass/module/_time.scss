@@ -1,0 +1,13 @@
+.time{
+  display: flex;
+  margin-bottom: 20px;
+
+  &__item {
+    margin-right: 20px;
+    font-size: $textFontSize-small;
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+}

@@ -1,11 +1,16 @@
 ._pcNone {
-  @include mq-up('lg') {
-    display:none;
+  @include mq-up("lg") {
+    display: none;
   }
 }
 
 ._pcOnly {
-  @include mq-down('lg') {
-    display:none;
+  @include mq-down("lg") {
+    display: none;
+  }
+}
+
+._spOnly {
+  @include mq-down("sm") {
   }
 }

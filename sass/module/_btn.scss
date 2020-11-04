@@ -6,6 +6,23 @@
   font-size: $textFontSize-big;
   border-radius: 10px;
 
+  @include mq-down("lg") {
+    width: 200px;
+  }
+
+  @include mq-down("md") {
+    width: 150px;
+    height: 50px;
+  }
+
+  &--contact{
+    margin: 60px 0;
+
+    @include mq-down("sm") {
+      margin: 20px 0;
+    }
+  }
+
   a {
     text-decoration: none;
     color: $color-white;

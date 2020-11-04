@@ -5,8 +5,18 @@
     text-align: center;
     padding: 30px;
 
+    @include mq-down("lg") {
+      height: 100px;
+      padding: 15px;
+    }
+
+    @include mq-down("sm") {
+      height: 80px;
+      padding: 15px;
+    }
+
     &__title {
-      font-size: $titleFontSize-medium;
+      font-size: $titleFontSize-middle;
       color:$color-black;
     }
 

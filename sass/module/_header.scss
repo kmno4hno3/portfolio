@@ -3,7 +3,14 @@
   height: 80px;
   position: fixed;
   top: 0px;
-  padding: 0 30px;
+  padding-right:30px;
   z-index: 100;
 
+  @include mq-down("lg") {
+    height: 60px;
+  }
+
+  &--scrolled {
+    background-color: white;
+  }
 }

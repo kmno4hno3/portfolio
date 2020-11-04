@@ -2,7 +2,19 @@
   &--topbg {
     width :100%;
     height: 910px;
-    background-image: url("../img/top-bg.jpg");
+    background-image: url("../img/bg-top.jpg");
     background-size: cover;
+  
+    @include mq-down("lg") {
+      height: 700px;
+    }
+  
+    @include mq-down("md") {
+      height: 550px;
+    }
+
+    @include mq-down("sm") {
+      height: 400px;
+    }
   }
 }

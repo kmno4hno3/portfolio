@@ -23,18 +23,20 @@ $color-white: white;
 $color-blue: rgba(0, 72, 255, 1);
 $color-black: black;
 $color-gray: rgba(249, 249, 249, 1);
+$color-darkGray: #474444;
 
 
 /*-------------------------
 	@font-size
  -------------------------*/
-$textFontSize-small : 14px;
-$textFontSize-medium : 20px;
-$textFontSize-big : 28px;
+$textFontSizeForbody-small: 1.6em; // chromeブラウザがルートと解釈しないように
+$textFontSize-small : 1.6rem;
+$textFontSize-middle : 2rem;
+$textFontSize-big : 2.8rem;
 
 // $titleFontSize-small : 14px;
-$titleFontSize-medium : 48px;
-$titleFontSize-big : 84px;
+$titleFontSize-middle : 4.8rem;
+$titleFontSize-big : 8.4rem;
 
 
  /*-------------------------
