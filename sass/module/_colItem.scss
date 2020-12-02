@@ -10,7 +10,6 @@
 
   @include mq-down("lg") {
     width: 160px;
-    // margin: 0 5px;
   }
 
   @include mq-down("md") {

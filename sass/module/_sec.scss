@@ -8,11 +8,11 @@
   }
 
   &--topbg {
-    width :100%;
+    width: 100%;
     height: 910px;
     background-image: url("../img/bg-top.jpg");
     background-size: cover;
-  
+
     @include mq-down("lg") {
       height: 55vh;
       background-position-x: center;
