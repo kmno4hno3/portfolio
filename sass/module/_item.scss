@@ -1,0 +1,24 @@
+.item {
+  margin-bottom: 120px;
+
+  &__tit {
+    font-size:$textFontSize-big;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+  }
+
+  &__skill {
+    margin: 30px 0;
+    font-size: $textFontSize-small;
+  }
+
+  &__workinfo {
+    font-size: $textFontSize-small;
+    margin-bottom: 15px;
+  }
+
+  &__siteurl {
+    color: $color-black;
+  }
+}
