@@ -1,0 +1,14 @@
+.table {
+  margin: 30px auto;
+
+  &__line {
+    text-align: left;
+    border-bottom: dashed 1px $color-middlegray;
+    font-size: $textFontSize-small;
+
+    td {
+      width: 200px;
+      line-height: 50px;
+    }
+  }
+}
