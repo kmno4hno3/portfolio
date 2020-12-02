@@ -1,0 +1,32 @@
+.wpcf7 {
+  max-width: 600px;
+  margin: 0 auto;
+
+  &__input {
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    font-size: 100%;
+    padding: 0.5em;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) inset;
+  }
+
+  &__submit {
+    font-size: 100%;
+    padding: 0.2em 0.4em;
+    background: $color-gray;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
+
+    &:hover {
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.2) inset;
+    }
+  }
+}
