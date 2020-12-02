@@ -126,3 +126,11 @@ function show_page_number() {
 
 // wpが自動で出力するcanonicalタグを止める
 remove_action('wp_head', 'rel_canonical');
+
+
+// 画像のディレクトリ指定
+// function my_img_pass_short($arg) {
+//   $content = str_replace('"images/', '"' . get_bloginfo('template_directory') . '/images/', $arg);
+//   return $content;
+//   }
+//   add_action('the_content', 'my_img_pass_short');
