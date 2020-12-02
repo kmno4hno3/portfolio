@@ -1,0 +1,11 @@
+.menu {
+  width:700px;
+  margin: auto;
+
+  @include mq-down("lg") {
+    width:60%;
+  }
+
+  font-size: $textFontSize-middle;
+  line-height: 4rem;
+}
