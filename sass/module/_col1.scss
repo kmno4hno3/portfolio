@@ -1,4 +1,37 @@
 .col1 {
+  text-align:center;
+  margin: 0 auto;
+  max-width: 600px;
+
+  &__img {
+    width: 250px;
+  }
+
+  &__lists {
+    padding: 0 80px;
+    text-align:left;
+    list-style: none;
+  }
+
+  &__other {
+    margin: 30px 0;
+    text-align:center;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    margin: 0 auto;
+    color: $color-black;
+  }
+
+  &__icon {
+    color:gray;
+  }
+  
+  
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
