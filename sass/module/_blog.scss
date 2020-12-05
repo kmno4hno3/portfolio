@@ -1,0 +1,25 @@
+.blog {
+
+  &__tit{
+    font-size: $textFontSize-big;
+    margin: 15px 0;
+  }
+
+  &__date {
+    
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__cat{
+    margin: 15px 0;
+  }
+
+  &__text{
+    font-size: $textFontSize-small;
+    margin: 15px 0;
+  }
+}

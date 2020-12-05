@@ -30,8 +30,8 @@
 ?>
   <p class="cardItem__tit"><?php echo my_the_title(get_the_title($post->ID)); ?></p>
   <div class="time">
-    <p class="time__item"><i class="time__icon fa fa-sync-alt"></i><?php echo get_the_time('Y-m-d'); ?></p>
-    <p class="time__item"><i class="time__icon fas fa-calendar-alt"></i><?php echo get_the_modified_time('Y-m-d');?>
+    <p class="time__item"><i class="time__icon fas fa-calendar-alt"></i><?php echo get_the_time('Y-m-d'); ?></p>
+    <p class="time__item"><i class="time__icon fa fa-sync-alt"></i><?php echo get_the_modified_time('Y-m-d');?>
     </p>
   </div>
   <p class="cardItem__text cardItem__text--blog"><?php echo my_the_text(get_the_excerpt($post->ID)); ?></p>
