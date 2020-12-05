@@ -126,7 +126,17 @@ add_filter('the_excerpt', 'my_the_excerpt');
  * @return void
  */
 function my_the_title($postContent){
-  $postContent = mb_strimwidth($postContent, 0, 30, "...", "UTF-8");
+
+  // 個別投稿ページ、固定ページの場合
+  if(is_singular()){
+    $postContent = mb_strimwidth($postContent, 0, 100, "...", "UTF-8");
+  }
+  
+  // トップページの場合
+  if(is_front_page()){
+    $postContent = mb_strimwidth($postContent, 0, 30, "...", "UTF-8");
+  }
+  
   return $postContent;
 }
 add_filter('the_title', 'my_the_title');

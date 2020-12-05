@@ -11,6 +11,7 @@
         <div class="main">
           <div class="col1 col1--blog">
             <?php
+              get_template_part('template-parts/breadcrumb');
               get_template_part('loop-content');
             ?>
           </div>
