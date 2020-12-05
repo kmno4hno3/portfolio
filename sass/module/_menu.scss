@@ -8,4 +8,9 @@
 
   font-size: $textFontSize-middle;
   line-height: 4rem;
+
+  &__detail{
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
