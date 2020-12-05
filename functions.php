@@ -1,12 +1,19 @@
 <?php
-
-// cssディレクトリのstyle.cssの読み込み
+/**
+ * cssディレクトリのstyle.cssの読み込み
+ *
+ * @return void
+ */
 function register_stylesheet()
 { // 読み込むCSSを登録する
   wp_register_style('style', get_template_directory_uri() . '/css/style.css');
 }
 
-// cssの読み込み順番を定義
+/**
+ * cssの読み込み順番を定義
+ *
+ * @return void
+ */
 function add_stylesheet()
 { // 登録したCSSを以下の順番で読み込む
   register_stylesheet();
@@ -14,7 +21,14 @@ function add_stylesheet()
 }
 add_action('wp_enqueue_scripts', 'add_stylesheet');
 
-// ナビメニューのliにclassを追加
+/**
+ * ナビメニューのliにclassを追加
+ *
+ * @param [type] $classes
+ * @param [type] $item
+ * @param [type] $args
+ * @return void
+ */
 function add_additional_class_on_li($classes, $item, $args)
 {
   if (isset($args->add_li_class)) {
@@ -24,7 +38,11 @@ function add_additional_class_on_li($classes, $item, $args)
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
-// jsの読み込み
+/**
+ * jsの読み込み
+ *
+ * @return void
+ */
 function my_scripts()
 {
   wp_enqueue_style('my-drawer-style', 'https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css', array(), '3.2.2', false);
@@ -34,8 +52,11 @@ function my_scripts()
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
 
-
-// ナビゲーションメニュー設定
+/**
+ * ナビゲーションメニュー設定
+ *
+ * @return void
+ */
 function my_menu_init()
 {
   register_nav_menu('header-nav', 'ヘッダーナビゲーション');
@@ -44,7 +65,11 @@ function my_menu_init()
 add_action('init', 'my_menu_init');
 
 
-// カスタム投稿タイプの追加
+/**
+ * カスタム投稿タイプの追加
+ *
+ * @return void
+ */
 function create_post_type()
 {
   register_post_type(
@@ -70,28 +95,49 @@ add_theme_support( 'post-thumbnails' );
 
 
 // 抜粋文字数制限
+/**
+ * 抜粋文字数制限
+ *
+ * @param [type] $postContent
+ * @return void
+ */
 function my_the_excerpt($postContent){
   $postContent = mb_strimwidth($postContent, 0, 100, "...", "UTF-8");
   return $postContent;
 }
 add_filter('the_excerpt', 'my_the_excerpt');
 
-//  本文テキスト文字数制限
+ /**
+  * 本文テキスト文字数制限
+  *
+  * @param [type] $postContent
+  * @return void
+  */
 function my_the_text($postContent){
   $postContent = mb_strimwidth($postContent, 0, 200, "...", "UTF-8");
   return $postContent;
 }
 add_filter('the_excerpt', 'my_the_excerpt');
 
-// タイトル文字数制限
+/**
+ * タイトル文字数制限
+ *
+ * @param [type] $postContent
+ * @return void
+ */
 function my_the_title($postContent){
   $postContent = mb_strimwidth($postContent, 0, 30, "...", "UTF-8");
   return $postContent;
 }
 add_filter('the_title', 'my_the_title');
 
-// noindexをつける
+
 if ( !function_exists( 'is_noindex_page' ) ):
+  /**
+   * noindexをつける
+   *
+   * @return boolean
+   */
   function is_noindex_page(){
     return ( is_month()) ||  //月のアーカイブページはインデックスに含めない
     is_date() ||  //日のアーカイブはインデックスに含めない
@@ -106,8 +152,11 @@ if ( !function_exists( 'is_noindex_page' ) ):
 // <title></title>をページ種類に応じて自動出力 TODO:いずれここを<title>タグを全て置き換える
 // add_theme_support( 'title-tag' );
 
-
-// 抜粋を表示する
+/**
+ * 抜粋を表示する
+ *
+ * @return void
+ */
 function original_description() {
   if(get_the_excerpt()) {
     $description = get_the_excerpt();
@@ -115,7 +164,11 @@ function original_description() {
   return $description;
 }
 
-// 現在のページ送り番号を表示(カテゴリーページを表示する際に必要)
+/**
+ * 現在のページ送り番号を表示(カテゴリーページを表示する際に必要)
+ *
+ * @return void
+ */
 function show_page_number() {
   global $wp_query;
 
@@ -134,3 +187,87 @@ remove_action('wp_head', 'rel_canonical');
 //   return $content;
 //   }
 //   add_action('the_content', 'my_img_pass_short');
+
+
+/**
+ * サイドバー表示
+ *
+ * @return void
+ */
+function my_widgets_init(){
+  register_sidebar(
+    array(
+      'name' => 'Main Sidebar',
+      'id' => 'main-sidebar',
+      'before_widget'=>'<div id="%1$s" class="%2$s sidebar__wrapper">',
+      'after_widget'=>'</div>',
+      'before_title' => '<h3 class="sidebar__title">',
+      'after_title' => '</h3>'
+    )
+  );
+}
+add_action('widgets_init', 'my_widgets_init');
+
+
+/**
+ * ページネーション出力関数
+ *
+ * @param [type] $pages 全ページ数
+ * @param [type] $paged 現在のページ
+ * @param integer $range 左右に何ページ表示するか
+ * @param boolean $show_only 1ページしかない時に表示するかどうか
+ * @return void
+ */
+function pagination( $pages, $paged, $range = 2, $show_only = false ) {
+
+  $pages = ( int ) $pages;    //float型で渡ってくるので明示的に int型 へ
+  $paged = $paged ?: 1;       //get_query_var('paged')をそのまま投げても大丈夫なように
+
+  //表示テキスト
+  $text_first   = "« 最初へ";
+  $text_before  = "‹ 前へ";
+  $text_next    = "次へ ›";
+  $text_last    = "最後へ »";
+
+  if ( $show_only && $pages === 1 ) {
+      // １ページのみで表示設定が true の時
+      echo '<div class="pagination"><span class="pagination__currentpager">1</span></div>';
+      return;
+  }
+
+  if ( $pages === 1 ) return;    // １ページのみで表示設定もない場合
+
+  if ( 1 !== $pages ) {
+      //２ページ以上の時
+      echo '<div class="pagination">';
+      if ( $paged > $range + 1 ) {
+          // 「最初へ」 の表示
+          echo '<a href="', get_pagenum_link(1) ,'" class="pagination__first">', $text_first ,'</a>';
+      }
+      if ( $paged > 1 ) {
+          // 「前へ」 の表示
+          echo '<a href="', get_pagenum_link( $paged - 1 ) ,'" class="pagination__prev">', $text_before ,'</a>';
+      }
+      for ( $i = 1; $i <= $pages; $i++ ) {
+
+          if ( $i <= $paged + $range && $i >= $paged - $range ) {
+              // $paged +- $range 以内であればページ番号を出力
+              if ( $paged === $i ) {
+                  echo '<span class="pagination__currentpager">', $i ,'</span>';
+              } else {
+                  echo '<a href="', get_pagenum_link( $i ) ,'" class="pagination__pager">', $i ,'</a>';
+              }
+          }
+
+      }
+      if ( $paged < $pages ) {
+          // 「次へ」 の表示
+          echo '<a href="', get_pagenum_link( $paged + 1 ) ,'" class="pagination__next">', $text_next ,'</a>';
+      }
+      if ( $paged + $range < $pages ) {
+          // 「最後へ」 の表示
+          echo '<a href="', get_pagenum_link( $pages ) ,'" class="pagination__last">', $text_last ,'</a>';
+      }
+      echo '</div>';
+  }
+}
