@@ -13,6 +13,15 @@
   'orderby' => 'date',
   'order' => 'DESC',
   );
+
+  // カテゴリーページの場合
+  if(is_category()){
+    $cat = get_the_category();
+    $cat = $cat[0];
+    $cat_id = $cat->cat_ID;
+    $args['cat'] = $cat_id;
+  }
+
   $the_query = new WP_query($args);
 ?>
 <?php 

@@ -8,10 +8,7 @@
           <div class="col1 col1--blog">
             <?php if(have_posts()): while(have_posts()):the_post(); ?>
             <div class="blog">
-              <!-- TODO:パンくずリスト修正 -->
-              <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-                <?php if(function_exists('bcn_display')){bcn_display();}?>
-              </div>
+              <?php get_template_part('template-parts/breadcrumb');?>
               <h1>
                 <p class="blog__tit"><?php the_title(); ?></p>
               </h1>
