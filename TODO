@@ -1,7 +1,0 @@
-
-レビュー:
-✔ フッターの位置変更 @done(20-11-03 16:19)
-☐ index.phpに404の処理記載
-✔ ハンバーガーメニューの大きさ @done(20-11-03 17:13)
-✔ sass/module/_sec.scssにbackground-position-x: center;を追加(被写体) @done(20-11-03 17:20)
-✔ _sec.scssをheight.vhに変更 @done(20-11-03 17:24)

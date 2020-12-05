@@ -48,7 +48,7 @@
     </div>
 
     <div class="inner--header">
-      <div class="logo"><a href="#">
+      <div class="logo"><a href="/">
           <h1 class="logo__txt">Tatsuo Web Design</h1>
         </a></div>
       <div class="nav--header _pcOnly">

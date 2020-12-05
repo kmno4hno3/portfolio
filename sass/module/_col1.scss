@@ -3,6 +3,10 @@
   margin: 0 auto;
   max-width: 600px;
 
+  &--blog {
+    text-align:left;
+  }
+
   &__img {
     width: 250px;
   }
@@ -30,13 +34,4 @@
   &__icon {
     color:gray;
   }
-  
-  
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  max-width: 800px;
-  width:80%;
-  margin: 0 auto;
 }
