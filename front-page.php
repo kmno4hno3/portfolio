@@ -10,7 +10,7 @@
         <!-- Todo:ここinnerのみに変更 -->
         <h1 class="top__title">Web Design</h1>
         <p class="top__text">ご要望通りの満足頂けるオリジナルのWEBサイト制作を承ります</p>
-        <button class="btn"><a href="#">CONTACT</a></button>
+        <button class="btn"><a href="/contact">CONTACT</a></button>
       </div>
     </div>
   </section><!-- /sec -->
@@ -56,7 +56,7 @@
         </div>
         <div class="detail">
           <p class="detail__txt">
-            <a href="#" class="detail__link">サービスの詳細
+            <a href="/service" class="detail__link">サービスの詳細
               <i class="detail__icon fa fa-chevron-right"></i>
             </a>
           </p>
@@ -102,7 +102,7 @@
         </div>
         <div class="detail">
           <p class="detail__txt">
-            <a href="#" class="detail__link">制作物一覧
+            <a href="/works" class="detail__link">制作物一覧
               <i class="detail__icon fa fa-chevron-right"></i>
             </a>
           </p>
@@ -151,7 +151,7 @@
         </div>
         <div class="detail">
           <p class="detail__txt">
-            <a href="#" class="detail__link">ブログ一覧
+            <a href="/blog" class="detail__link">ブログ一覧
               <i class="detail__icon fa fa-chevron-right"></i>
             </a>
           </p>
@@ -180,7 +180,7 @@
         </div>
         <div class="detail">
           <p class="detail__txt">
-            <a href="#" class="detail__link">プロフィール詳細
+            <a href="/about" class="detail__link">プロフィール詳細
               <i class="detail__icon fa fa-chevron-right"></i>
             </a>
           </p>
@@ -199,7 +199,7 @@
       <div class="container container--contact">
         <div class="contact">
           <p class="contact__txt">お気軽に下記応募フォームからお問い合わせ下さい</p>
-          <button class="btn btn--contact"><a href="#">CONTACT</a></button>
+          <button class="btn btn--contact"><a href="/contact">CONTACT</a></button>
           <p class="contact__txt">翌営業日までには返信致します。</p>
         </div>
       </div>
