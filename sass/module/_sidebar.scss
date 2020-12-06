@@ -2,6 +2,11 @@
   flex: 1;
   max-width: 400px;
 
+  // TODO:後でサイドバーを下に表示するように修正
+  @include mq-down("lg") {
+    display:none;
+  }
+
   &__menu {
     & li {
       list-style: none;

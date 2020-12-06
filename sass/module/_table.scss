@@ -9,6 +9,16 @@
     td {
       width: 200px;
       line-height: 50px;
+
+      @include mq-down("md") {
+        width: 150px;
+        line-height: 40px;
+      }
+    
+      @include mq-down("sm") {
+        width: 100px;
+        line-height: 25px;
+      }
     }
   }
 }
